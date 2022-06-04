@@ -1,10 +1,10 @@
-import { View, Text, Image} from 'react-native'
+import { View, Text, Image, StyleSheet} from 'react-native'
 import React from 'react'
 
 export default function Country({country}) {
   return (
-    <View>
-      <Text style={{fontSize:20}}> Country Name : {country?.name.common}</Text>
+    <View style={styles.container}>
+      <Text style={{fontSize:20, paddingBottom: 15}}> Country Name : {country?.name.common}</Text>
       <Image
           source={{
             uri: country.flags.png
@@ -14,4 +14,10 @@ export default function Country({country}) {
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 20
+  }
+})
 
